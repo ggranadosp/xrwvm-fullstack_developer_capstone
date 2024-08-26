@@ -124,3 +124,14 @@ img{
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
 }
+.container {
+    margin-top: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p, li {
+    font-size: 18px;
+}
