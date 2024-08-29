@@ -9,6 +9,7 @@ from django.contrib import messages
 from datetime import datetime
 
 from django.http import JsonResponse
+from .models import CarMake, CarModel
 from django.contrib.auth import login, authenticate
 import logging
 import json
