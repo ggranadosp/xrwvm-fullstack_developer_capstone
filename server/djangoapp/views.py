@@ -39,9 +39,13 @@ def login_user(request):
     return JsonResponse(data)
 
 # Create a `logout_request` view to handle sign out request
-# def logout_request(request):
-# ...
-
+def logout_user(request):
+    if request.method == 'GET':
+        logout(request)  # Cierra la sesión del usuario actual
+        data = {"userName": ""}  # Devuelve un objeto JSON con el nombre de usuario vacío
+        return JsonResponse(data)
+    else:
+        return JsonResponse({"error": "Invalid method"}, status=405)
 # Create a `registration` view to handle sign up request
 # @csrf_exempt
 # def registration(request):
